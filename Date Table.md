@@ -1,3 +1,4 @@
+```
 let
     Source = Excel.Workbook(File.Contents("C:\Users\benja\OneDrive\Onedrive\Productivity\Master Date Table.xlsx"), null, true),
     #"Date Table Text_Sheet" = Source{[Item="Date Table Text",Kind="Sheet"]}[Data],
@@ -9,3 +10,4 @@ let
     #"Changed Type1" = Table.TransformColumnTypes(#"Added Week Number numeric",{{"Week Number numeric", Int64.Type}, {"Week Number Text", type text}})
 in
     #"Changed Type1"
+```
