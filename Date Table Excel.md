@@ -1,4 +1,8 @@
 ```
+/*
+Version 1.0: This is importing all data from Master Date Table.xlsx. And change them to the correct format.
+*/
+
 let
     Source = Excel.Workbook(File.Contents("C:\Users\benja\OneDrive\Onedrive\Productivity\Master Date Table.xlsx"), null, true),
     #"Date Table Text_Sheet" = Source{[Item="Date Table Text",Kind="Sheet"]}[Data],
